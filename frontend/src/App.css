@@ -1,0 +1,278 @@
+.demo-logo-vertical {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+[data-theme='dark'] .site-layout .site-layout-background {
+  background: #141414;
+}
+
+/* 固定左侧工具栏，防止滚动 */
+.ant-layout-sider {
+  position: fixed;
+  height: 100vh;
+  overflow: auto;
+  z-index: 100;
+  left: 0;
+  top: 0;
+}
+
+/* 调整主内容区域的布局，避免左侧工具栏遮挡 */
+.ant-layout-has-sider > .ant-layout {
+  margin-left: 200px;
+  transition: margin-left 0.2s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-layout-has-sider > .ant-layout.ant-layout-has-sider > .ant-layout-sider-collapsed {
+  margin-left: 80px;
+}
+
+/* 移除右侧功能页正上方的空白区域 */
+.ant-layout-header {
+  height: 64px;
+  padding: 0;
+  line-height: 64px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+
+/* 优化质量评估模块布局 */
+.quality-evaluation-container {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.quality-evaluation-content {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: auto;
+  flex: 1;
+}
+
+/* 仪表盘样式 */
+.dashboard-card {
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+
+.dashboard-card .ant-card-head {
+  background: #fafafa;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 8px 8px 0 0;
+}
+
+/* 雷达图容器 */
+.radar-chart-container {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 直方图容器 */
+.histogram-container {
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+/* 相关性热力图容器 */
+.heatmap-container {
+  height: 400px;
+  overflow: auto;
+}
+
+/* 散点图容器 */
+.scatter-plot-container {
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+/* 箱线图容器 */
+.box-plot-container {
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+/* 评估指标卡片 */
+.metric-card {
+  text-align: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.metric-card .metric-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.metric-card .metric-label {
+  font-size: 16px;
+  color: #666;
+}
+
+/* 质量评分展示 */
+.quality-score {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.quality-score.excellent {
+  background: #f6ffed;
+  border: 1px solid #b7eb8f;
+  color: #52c41a;
+}
+
+.quality-score.good {
+  background: #fffbe6;
+  border: 1px solid #ffe58f;
+  color: #faad14;
+}
+
+.quality-score.poor {
+  background: #fff2f0;
+  border: 1px solid #ffccc7;
+  color: #ff4d4f;
+}
+
+/* 优化数据质量模块的布局 */
+.evaluation-container {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.evaluation-content {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: auto;
+  flex: 1;
+}
+
+/* 优化卡片组件的样式，防止内容被遮盖 */
+.ant-card {
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.ant-card-bordered {
+  border: 1px solid #f0f0f0;
+}
+
+/* 优化表格样式，提高可读性 */
+.ant-table {
+  margin-bottom: 20px;
+  overflow: auto;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #fafafa;
+  font-weight: bold;
+}
+
+/* 优化标签页样式 */
+.ant-tabs {
+  margin-bottom: 20px;
+}
+
+.ant-tabs-tab {
+  font-weight: 500;
+}
+
+/* 优化进度条样式 */
+.ant-progress {
+  margin-bottom: 8px;
+}
+
+/* 响应式布局优化 */
+@media (max-width: 768px) {
+  .ant-layout-has-sider > .ant-layout {
+    margin-left: 0;
+  }
+  
+  .ant-layout-sider {
+    position: absolute;
+    z-index: 100;
+  }
+  
+  .ant-layout-sider-collapsed {
+    position: fixed;
+  }
+}
+
+.upload-container {
+  padding: 20px;
+}
+
+.model-selection-container {
+  padding: 20px;
+}
+
+.synthesis-container {
+  padding: 20px;
+}
+
+.evaluation-container {
+  padding: 20px;
+}
+
+.download-container {
+  padding: 20px;
+}
+
+/* 优化滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 优化内容区域 */
+.ant-layout-content {
+  flex: 1;
+  overflow: auto;
+  padding: 24px 16px !important;
+}
+
+/* 优化页脚 */
+.ant-layout-footer {
+  text-align: center;
+  flex-shrink: 0;
+}

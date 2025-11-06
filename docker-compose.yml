@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  LLM4Table:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./synthetic_data:/app/synthetic_data
+      - ./model_cache:/app/model_cache
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+    restart: unless-stopped
